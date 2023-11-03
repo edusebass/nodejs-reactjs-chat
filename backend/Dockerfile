@@ -11,7 +11,7 @@ COPY backend/package*.json ./
 RUN npm install
 
 # Copia el resto de los archivos de tu aplicación
-COPY backend/ .
+COPY ./backend/ .
 
 # Comando para iniciar el servidor
 CMD ["node", "index.js"]
