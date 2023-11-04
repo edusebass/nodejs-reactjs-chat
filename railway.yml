@@ -4,7 +4,7 @@ services:
     name: frontend
     dockerfile: Dockerfile
     buildPath: /app
-    port: 3000
+    port: $PORT # Utiliza la variable de entorno PORT
     env: production
     routes:
       - src: /.*
