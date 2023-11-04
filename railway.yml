@@ -1,0 +1,11 @@
+version: 2
+services:
+  web:
+    name: frontend
+    dockerfile: Dockerfile
+    buildPath: /app
+    port: 3000
+    env: production
+    routes:
+      - src: /.*
+        dest: /index.html
