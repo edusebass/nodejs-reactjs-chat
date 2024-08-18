@@ -4,8 +4,11 @@ const AuthPage = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     const { value } = e.target[0];
+    console.log(value);
     axios
-      .post("https://server-node-react-chat-production.up.railway.app/authenticate", { username: value })
+      .post("https://server-node-react-chat.vercel.app/authenticate", {
+        username: value,
+      })
       .then((r) => props.onAuth({ ...r.data, secret: value }))
       .catch((e) => console.log("Auth Error", e));
   };
